@@ -16,11 +16,11 @@
 You are in the "Add page"<br>
 <h2>Please add information about pills</h2>
 
-<form:form action="/showResult" modelAttribute="pills">
+<form:form action="/savePills" modelAttribute="pills">
     Name <form:input path="name"/><br>
     Cost <form:input path="cost"/><br>
 
-    <input type="submit" value="Add"/>
+    <input type="submit" value="ADD"/>
 </form:form>
 
 <font color="#dc143c"> <h2>(The page is in the development!)</h2></font>
