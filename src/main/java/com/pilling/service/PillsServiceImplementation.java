@@ -24,4 +24,10 @@ public class PillsServiceImplementation implements PillsService{
     public void savePill(Pills pill){
         pillsDAO.savePill(pill);
     }
+
+    @Override
+    @Transactional
+    public List<Pills> searchPills(String name){
+        return pillsDAO.searchPills(name);
+    }
 }

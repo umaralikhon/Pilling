@@ -8,6 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.List;
+
 @Controller
 public class MyController {
     @Autowired
@@ -25,20 +27,21 @@ public class MyController {
         return "addPillsPageView";
     }
 
-    @RequestMapping("/searchPills")
-    public String searchPillsPage(){
-        return "searchPillsPageView";
-    }
-
-    @RequestMapping("/showResult")
-    public String showResultPageView(){
-        return "showResultPageView";
-    }
-
     @RequestMapping("/savePills")
     public String savePillsPage(@ModelAttribute("pills") Pills pills){
         pillsService.savePill(pills);
 
         return "redirect: /addPills";
+    }
+
+    @RequestMapping("/searchPills")
+    public String searchPillsPage(@ModelAttribute("searchPillsAttr") Pills searchPills, Model model){
+        List<Pills> searchingResult = pillsService.searchPills(searchPills.getName());
+
+
+        model.addAttribute("searchResult", searchingResult);
+
+
+        return "searchPillsPageView";
     }
 }

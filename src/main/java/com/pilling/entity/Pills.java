@@ -16,6 +16,9 @@ public class Pills {
     @Column(name = "cost")
     private int cost;
 
+    @Column(name="amount")
+    private int amount;
+
     public Pills() {
 
     }
@@ -39,5 +42,21 @@ public class Pills {
 
     public int getCost() {
         return this.cost;
+    }
+
+    public void setAmount(int amount){
+        this.amount = amount;
+    }
+
+    public int getAmount(){
+        return this.amount;
+    }
+
+    public void setId(int id){
+        this.id= id;
+    }
+
+    public int getId(){
+        return id;
     }
 }
