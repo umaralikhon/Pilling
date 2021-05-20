@@ -24,6 +24,7 @@ public class MyController {
     public String addPillsPage(Model model){
         Pills pills = new Pills();
         model.addAttribute("pills", pills);
+
         return "addPillsPageView";
     }
 
@@ -37,10 +38,7 @@ public class MyController {
     @RequestMapping("/searchPills")
     public String searchPillsPage(@ModelAttribute("searchPillsAttr") Pills searchPills, Model model){
         List<Pills> searchingResult = pillsService.searchPills(searchPills.getName());
-
-
         model.addAttribute("searchResult", searchingResult);
-
 
         return "searchPillsPageView";
     }
