@@ -5,9 +5,11 @@ import com.pilling.service.PillsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @Controller
@@ -22,17 +24,21 @@ public class MyController {
 
     @RequestMapping("/addPills")
     public String addPillsPage(Model model){
-        Pills pills = new Pills();
-        model.addAttribute("pills", pills);
+                 Pills pills = new Pills();
+                model.addAttribute("pills", pills);
 
-        return "addPillsPageView";
+                return "addPillsPageView";
     }
 
     @RequestMapping("/savePills")
-    public String savePillsPage(@ModelAttribute("pills") Pills pills){
-        pillsService.savePill(pills);
-
-        return "redirect: /addPills";
+    public String savePillsPage(@Valid @ModelAttribute("pills") Pills pills, BindingResult bindingResult){
+        if(bindingResult.hasErrors()){
+            return "addPillsPageView";
+        }
+        else {
+            pillsService.savePill(pills);
+            return "redirect:/addPills";
+        }
     }
 
     @RequestMapping("/searchPills")

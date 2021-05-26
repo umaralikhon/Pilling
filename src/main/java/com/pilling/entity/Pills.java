@@ -1,6 +1,8 @@
 package com.pilling.entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 @Table(name = "pills")
@@ -11,12 +13,18 @@ public class Pills {
     int id;
 
     @Column(name = "name")
+    @NotEmpty(message="Field should not be empty!")
+    @NotBlank(message="Field should not bu filled with blanks only!")
     private String name;
 
     @Column(name = "cost")
+    @NotEmpty(message="Field should not be empty!")
+    @NotBlank(message="Field should not bu filled with blanks only!")
     private int cost;
 
     @Column(name="amount")
+    @NotEmpty(message="Field should not be empty!")
+    @NotBlank(message="Field should not bu filled with blanks only!")
     private int amount;
 
     public Pills() {

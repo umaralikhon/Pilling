@@ -8,34 +8,34 @@
 </head>
 <body>
 
-<form:form action="/searchPills" modelAttribute="searchPillsAttr">
-    Enter search pill<br>
-    <form:input path="name"/>
-    <input type="reset" value="Search"/>
-</form:form>
+    <form:form action="/searchPills" modelAttribute="searchPillsAttr">
+        Enter search pill<br>
+        <form:input path="name"/>
+        <input type="reset" value="Search"/>
+    </form:form>
 
-<table>
-    <tr>
-    <th>Name</th>
-    <th>Cost</th>
-    <th>Amount</th>
-</tr>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Cost</th>
+            <th>Amount</th>
+        </tr>
 
-<c:forEach var="pill" items="${searchResult}">
-    <tr>
-        <td>${pill.name}</td>
-        <td>${pill.cost}</td>
-        <td>${pill.amount}</td>
-    </tr>
-</c:forEach>
-</table>
-<br><br>
+        <c:forEach var="pill" items="${searchResult}">
+            <tr>
+                <td>${pill.name}</td>
+                <td>${pill.cost}</td>
+                <td>${pill.amount}</td>
+            </tr>
+        </c:forEach>
+    </table>
+    <br><br>
 
-<form:form>
-<input type="submit" formaction="/" value="MAIN"/>
-<input type="submit" formaction="/addPills" value="ADD"/>
-</form:form>
+    <form:form>
+        <input type="submit" formaction="/" value="MAIN"/>
+        <input type="submit" formaction="/addPills" value="ADD"/>
+    </form:form>
 
-<font color="#dc143c"> <h2>(The page is in the development!)</h2></font>
+    <font color="#dc143c"> <h2>(The page is in the development!)</h2></font>
 </body>
 </html>
