@@ -7,6 +7,8 @@
 * [Hibernate ORM](https://hibernate.org/)
 * [Intellij IDEA Ultimate](https://www.jetbrains.com/ru-ru/idea/)
 * [MySQL](https://www.mysql.com/)
+* [Postman](https://www.postman.com/)
+* [Join GitHub](https://github.com/Umaralikhon)
 
 
 
