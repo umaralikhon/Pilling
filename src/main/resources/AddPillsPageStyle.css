@@ -1,0 +1,7 @@
+body{
+    border-radius: 10px ;
+    border: 2px solid;
+    background-color: cadetblue;
+    background: url("../webapp/WEB-INF/view/img/turquoise.jpg");
+    background-attachment: fixed;
+}

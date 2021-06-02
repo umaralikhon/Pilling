@@ -1,0 +1,7 @@
+#addPageDiv{
+    border-radius: 10px ;
+    border: 2px solid;
+    background-color: beige;
+    background-image: url("../img/turquoise.jpg");
+    background-attachment: fixed;
+}
