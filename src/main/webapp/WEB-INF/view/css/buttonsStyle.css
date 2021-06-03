@@ -1,14 +1,23 @@
 #addButton{
     border-radius: 5px;
     background-color: lightblue;
+    padding: 13px 32px;
 }
 
 #searchButton{
     border-radius: 5px;
     background-color: lightblue;
+    padding: 13px 25px;
 }
 
 #mainButton{
     border-radius: 5px;
     background-color: lightblue;
+    padding: 13px 32px;
+}
+
+#addButtonInAddPage{
+    border-radius: 5px;
+    background-color: lightblue;
+    padding: 13px 89px;
 }
