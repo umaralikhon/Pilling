@@ -15,7 +15,7 @@ import java.util.List;
 @Controller
 public class MyController {
     @Autowired
-    PillsService pillsService;
+    private PillsService pillsService;
 
     @RequestMapping("/")
     public String mainPage(){
