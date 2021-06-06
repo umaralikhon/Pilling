@@ -1,0 +1,72 @@
+#addButton{
+    border-radius: 20px;
+    background-color: lightblue;
+    padding: 30px 75px;
+    text-effect: engrave;
+}
+
+#searchButton{
+    border-radius: 20px;
+    background-color: lightblue;
+    padding: 30px 70px;
+}
+
+#mainButton{
+    border-radius: 20px;
+    background-color: lightblue;
+    padding: 30px 70px;
+}
+
+#addButtonInAddPage{
+    border-radius: 20px;
+    background-color: lightblue;
+    padding: 25px 265px;
+}
+
+#showBasketButton{
+    border-radius: 20px;
+    background-color: lightblue;
+    padding: 30px 70px;
+}
+
+#mainButtonInSearchPage{
+    border-radius: 20px;
+    background-color: lightblue;
+    padding: 20px 50px;
+}
+
+#addButtonInSearchPage{
+    border-radius: 20px;
+    background-color: lightblue;
+    padding: 20px 50px;
+}
+
+#basketButtonInSearchPage{
+    border-radius: 20px;
+    background-color: lightblue;
+    padding: 20px 45px;
+}
+
+#clearButton{
+    border-radius: 20px;
+    background-color: lightblue;
+    padding: 10px 15px;
+}
+
+#mainButtonInBasketPage{
+    border-radius: 20px;
+    background-color: lightblue;
+    padding: 20px 40px;
+}
+
+#addButtonInBasketPage{
+    border-radius: 20px;
+    background-color: lightblue;
+    padding: 20px 40px;
+}
+
+#searchButtonInBasketPage{
+    border-radius: 20px;
+    background-color: lightblue;
+    padding: 20px 35px;
+}

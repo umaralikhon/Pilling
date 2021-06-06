@@ -1,0 +1,21 @@
+#addPageStyle{
+    border-radius: 10px ;
+    border-style: inset;
+    border: 2px solid;
+    border-color: lightcyan;
+    background-color: beige;
+    background-image: url("../img/turquoise.jpg");
+    background-attachment: fixed;
+    width: 580px;
+    height: 550px;
+    padding: 20px;
+}
+
+#formArea{
+    border-radius: 10px;
+    border-color: beige;
+    background-color: antiquewhite;
+    width: 550px;
+    height: 140px;
+    padding: 10px;
+}

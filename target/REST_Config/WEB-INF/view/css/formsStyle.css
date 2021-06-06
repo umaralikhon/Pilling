@@ -1,0 +1,14 @@
+input {
+    border-radius: 3px;}
+
+#nameInput{
+    padding: 0 80px;
+}
+
+#costInput{
+    padding: 0 90px;
+}
+
+#amountInput{
+    padding: 0 70px;
+}

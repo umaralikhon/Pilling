@@ -1,0 +1,22 @@
+#searchPageStyle{
+    border-radius: 10px ;
+    border-style: inset;
+    border: 2px solid;
+    border-color: lightcyan;
+    background-color: beige;
+    background-image: url("../img/turquoise.jpg");
+    background-attachment: fixed;
+    width: 500px;
+    height: 380px;
+    padding: 10px;
+}
+
+#searchFormArea{
+    border-radius: 10px;
+    border-style: inset;
+    border-color: lightcyan;
+    background-color: antiquewhite;
+    width: 400px;
+    height: 120px;
+    padding: 10px;
+}

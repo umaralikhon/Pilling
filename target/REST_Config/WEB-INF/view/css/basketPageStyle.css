@@ -1,0 +1,40 @@
+#basketPage{
+    border-radius: 5px;
+    border-color: lightcyan;
+    border-style: inset;
+    width: 500px;
+    height: 500px;
+    background-color: beige;
+    background-attachment: fixed;
+    padding: 10px;
+}
+
+#basketTableArea{
+    border-radius: 20px;
+    border-color: lightcyan;
+    border-style: inset;
+    width: 400px;
+    height: 150px;
+    background-color: antiquewhite;
+    background-attachment: fixed;
+    padding: 10px;
+}
+
+#sumArea{
+    border-radius: 50px;
+    border-color: lightcyan;
+    border-style: inset;
+    width: 120px;
+    height: 80px;
+    background-color: antiquewhite;
+    background-attachment: fixed;
+    padding: 5px;
+}
+
+/*#basketPageButtons{*/
+/*    width: 120px;*/
+/*    height: 200px;*/
+/*    background-attachment: fixed;*/
+/*    padding: 5px;*/
+/*}*/
+
