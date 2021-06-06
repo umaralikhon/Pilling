@@ -14,7 +14,7 @@ public class PillsTest {
     }
 
     @Test
-    public void testForNameMethods(){
+    public void testForNameMethods() {
         Pills pills = new Pills("Pill1", 10, 20);
         pills.setName("Pill1");
 
@@ -22,21 +22,21 @@ public class PillsTest {
     }
 
     @Test
-    public void testForCostMethods(){
+    public void testForCostMethods() {
         Pills pills = new Pills();
         pills.setCost(50);
         Assert.assertEquals(50, pills.getCost());
     }
 
     @Test
-    public void testForAmountMethods(){
+    public void testForAmountMethods() {
         Pills pills = new Pills();
         pills.setAmount(10);
         Assert.assertEquals(10, pills.getAmount());
     }
 
     @Test
-    public void testForNameSetter(){
+    public void testForNameSetter() {
         Pills pills = new Pills();
         pills.setName("Pill2");
         Assert.assertEquals("Pill2", pills.getName());

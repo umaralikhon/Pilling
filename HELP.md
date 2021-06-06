@@ -10,6 +10,3 @@
 * [Postman](https://www.postman.com/)
 * [Join GitHub](https://github.com/Umaralikhon)
 * [Our Jira](https://pillingfarm.atlassian.net/)
-
-
-

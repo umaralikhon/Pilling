@@ -1,0 +1,19 @@
+#mainPage {
+    border-radius: 5px;
+    border-color: lightcyan;
+    border-style: inset;
+    width: 500px;
+    height: 500px;
+    background-color: beige;
+    background-attachment: fixed;
+    padding: 5px;
+    align-items: center;
+}
+
+#buttonsArea {
+    width: 450px;
+    height: 200px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    padding: 5px;
+}

@@ -1,4 +1,4 @@
-#addPageStyle {
+#searchPageStyle {
     border-radius: 10px;
     border-style: inset;
     border: 2px solid;
@@ -6,16 +6,17 @@
     background-color: beige;
     background-image: url("../img/turquoise.jpg");
     background-attachment: fixed;
-    width: 580px;
-    height: 550px;
-    padding: 20px;
+    width: 500px;
+    height: 380px;
+    padding: 10px;
 }
 
-#formArea {
+#searchFormArea {
     border-radius: 10px;
-    border-color: beige;
+    border-style: inset;
+    border-color: lightcyan;
     background-color: antiquewhite;
-    width: 550px;
-    height: 140px;
+    width: 400px;
+    height: 120px;
     padding: 10px;
 }

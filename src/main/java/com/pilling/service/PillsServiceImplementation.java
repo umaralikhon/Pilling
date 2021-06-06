@@ -9,25 +9,37 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-public class PillsServiceImplementation implements PillsService{
+public class PillsServiceImplementation implements PillsService {
     @Autowired
     private PillsDAO pillsDAO;
 
     @Override
     @Transactional
-    public List<Pills> getAllPills(){
+    public List<Pills> getAllPills() {
         return pillsDAO.getAllPills();
     }
 
     @Override
     @Transactional
-    public void savePill(Pills pill){
+    public void savePill(Pills pill) {
         pillsDAO.savePill(pill);
     }
 
     @Override
     @Transactional
-    public List<Pills> searchPills(String name){
+    public List<Pills> searchPills(String name) {
         return pillsDAO.searchPills(name);
+    }
+
+    @Override
+    @Transactional
+    public Pills getPill(int id) {
+        return pillsDAO.getPill(id);
+    }
+
+    @Override
+    @Transactional
+    public void deletePill(int id) {
+        pillsDAO.deletePill(id);
     }
 }

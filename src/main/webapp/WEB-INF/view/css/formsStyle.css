@@ -2,14 +2,14 @@ input {
     border-radius: 3px;
 }
 
-#nameInput{
-    padding: 0 50px;
+#nameInput {
+    padding: 0 80px;
 }
 
-#costInput{
-    padding: 0 60px;
+#costInput {
+    padding: 0 90px;
 }
 
-#amountInput{
-    padding: 0 40px;
+#amountInput {
+    padding: 0 70px;
 }

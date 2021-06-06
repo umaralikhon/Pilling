@@ -14,13 +14,13 @@ public class MyRESTController {
     private PillsService pillsService;
 
     @PostMapping("/addPills")
-    public Pills addPills(@RequestBody Pills pills){
+    public Pills addPills(@RequestBody Pills pills) {
         pillsService.savePill(pills);
         return pills;
     }
 
     @GetMapping("/showAllPills")
-    public List<Pills> getAllPills(){
+    public List<Pills> getAllPills() {
         List<Pills> allPills = pillsService.getAllPills();
         return allPills;
     }
