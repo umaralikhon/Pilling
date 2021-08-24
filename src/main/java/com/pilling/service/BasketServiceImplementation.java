@@ -1,39 +1,45 @@
 package com.pilling.service;
 
-import com.pilling.dao.BasketDAO;
+import com.pilling.repository.BasketRepository;
 import com.pilling.entity.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class BasketServiceImplementation implements BasketService {
     @Autowired
-    private BasketDAO basketDAO;
+    private BasketRepository repository;
 
     @Override
-    @Transactional
     public List<Basket> getAllPills() {
-        return basketDAO.getAllPills();
+        List<Basket> allPills = repository.findAll();
+        return allPills;
     }
 
     @Override
-    @Transactional
     public Basket getPill(int id) {
-        return basketDAO.getPill(id);
+        Optional<Basket> optional = repository.findById(id);
+        Basket basket =null;
+
+        if(optional.isEmpty()) {
+            System.out.println("Nothing found!");
+            return null;
+        }
+
+        basket = optional.get();
+        return basket;
     }
 
     @Override
-    @Transactional
     public void savePill(Basket pill) {
-        basketDAO.savePill(pill);
+        repository.save(pill);
     }
 
     @Override
-    @Transactional
     public void truncateTable() {
-        basketDAO.truncateTable();
+        repository.deleteAll();
     }
 }

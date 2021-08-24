@@ -1,9 +1,13 @@
 package com.pilling.entity;
 
+import lombok.*;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "basket")
+@Data
+@NoArgsConstructor
 public class Basket {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,45 +22,4 @@ public class Basket {
 
     @Column(name = "sum")
     private int sum;
-
-    public Basket() {
-
-    }
-
-    public Basket(String name, int cost) {
-        this.name = name;
-        this.cost = cost;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getCost() {
-        return cost;
-    }
-
-    public void setCost(int cost) {
-        this.cost = cost;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setSum(int sum) {
-        this.sum = sum;
-    }
-
-    public int getSum() {
-        return sum;
-    }
 }

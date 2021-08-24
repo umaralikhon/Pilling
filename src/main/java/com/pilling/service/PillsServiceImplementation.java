@@ -1,45 +1,54 @@
 package com.pilling.service;
 
-import com.pilling.dao.PillsDAO;
+import com.pilling.repository.PillingRepository;
 import com.pilling.entity.Pills;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PillsServiceImplementation implements PillsService {
     @Autowired
-    private PillsDAO pillsDAO;
+    private PillingRepository repository;
 
     @Override
-    @Transactional
     public List<Pills> getAllPills() {
-        return pillsDAO.getAllPills();
+        return repository.findAll();
     }
 
     @Override
-    @Transactional
-    public void savePill(Pills pill) {
-        pillsDAO.savePill(pill);
+    public Pills savePill(Pills pill) {
+        return repository.save(pill);
+//        return pill;
     }
 
     @Override
-    @Transactional
-    public List<Pills> searchPills(String name) {
-        return pillsDAO.searchPills(name);
+    public Pills searchPills(String name) {
+        Pills pill = null;
+        Optional<Pills> optional = repository.findByName(name);
+
+        if(optional.isPresent()){
+            pill = optional.get();
+        }
+        return pill;
     }
 
     @Override
-    @Transactional
     public Pills getPill(int id) {
-        return pillsDAO.getPill(id);
+        Pills pill = null;
+        Optional<Pills> optional = repository.findById(id);
+
+        if (optional.isPresent()) {
+            pill = optional.get();
+        }
+
+        return pill;
     }
 
     @Override
-    @Transactional
     public void deletePill(int id) {
-        pillsDAO.deletePill(id);
+        repository.deleteById(id);
     }
 }
